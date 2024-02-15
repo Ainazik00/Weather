@@ -6,7 +6,7 @@
     android:background="@drawable/colin"
     android:gravity="center"
     android:orientation="vertical"
-    tools:context="com.example.weather.view.SplashActivity">
+    tools:context="com.example.weather.presentation.SplashActivity">
 
     <ImageView
         android:layout_width="212dp"

@@ -5,18 +5,19 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/severin"
-    tools:context="com.example.weather.view.SplashActivity">
+    tools:context="com.example.weather.presentation.SplashActivity">
 
-    <androidx.appcompat.widget.SearchView
+    <EditText
         android:id="@+id/search"
-        android:layout_width="356dp"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:layout_marginTop="42dp"
+        android:layout_marginHorizontal="16dp"
+        android:layout_marginTop="40dp"
         android:background="@drawable/search"
-        android:iconifiedByDefault="false"
-        android:queryHint="Search for a city"
-        android:searchIcon="@drawable/img_3"
+        android:drawablePadding="8dp"
+        android:hint="@string/cityy"
+        android:padding="4dp"
+        android:textSize="28sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -59,15 +60,6 @@
         app:layout_constraintStart_toStartOf="@+id/tvDay"
         app:layout_constraintTop_toBottomOf="@+id/tvDay" />
 
-    <ImageView
-        android:id="@+id/weatherIcon"
-        android:layout_width="140dp"
-        android:layout_height="120dp"
-        android:layout_marginStart="30dp"
-        android:layout_marginTop="24dp"
-        android:background="@drawable/cloud"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/img_location" />
 
     <TextView
         android:id="@+id/tvWeather"
@@ -133,6 +125,16 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tvDay2" />
 
+    <ImageView
+        android:id="@+id/weatherIcon"
+        android:layout_width="140dp"
+        android:layout_height="120dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="24dp"
+        android:src="@drawable/cloud"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/img_location" />
+
     <FrameLayout
         android:layout_width="match_parent"
         android:layout_height="210dp"
@@ -166,6 +168,7 @@
                     app:srcCompat="@drawable/vector" />
 
                 <TextView
+                    android:id="@+id/tvHumidity"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:gravity="center"
@@ -173,7 +176,6 @@
                     android:textColor="@color/black" />
 
                 <TextView
-                    android:id="@+id/tvHumidity"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:gravity="center"
@@ -199,6 +201,7 @@
                     app:srcCompat="@drawable/rain" />
 
                 <TextView
+                    android:id="@+id/tvCondition"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:gravity="center"
@@ -206,7 +209,6 @@
                     android:textColor="@color/black" />
 
                 <TextView
-                    android:id="@+id/tvCondition"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:gravity="center"
@@ -231,6 +233,7 @@
                     app:srcCompat="@drawable/snow" />
 
                 <TextView
+                    android:id="@+id/tvWindSpeed"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:gravity="center"
@@ -238,7 +241,6 @@
                     android:textColor="@color/black" />
 
                 <TextView
-                    android:id="@+id/tvWindSpeed"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:gravity="center"
@@ -251,6 +253,7 @@
                 android:layout_width="80dp"
                 android:layout_height="88dp"
                 android:layout_marginHorizontal="26dp"
+                android:layout_marginBottom="4dp"
                 android:background="@drawable/backgroundshape"
                 android:gravity="center"
                 android:orientation="vertical"
@@ -263,6 +266,7 @@
                     app:srcCompat="@drawable/sea" />
 
                 <TextView
+                    android:id="@+id/tvSea"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:gravity="center"
@@ -270,7 +274,6 @@
                     android:textColor="@color/black" />
 
                 <TextView
-                    android:id="@+id/tvSea"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:gravity="center"
@@ -296,6 +299,7 @@
                     app:srcCompat="@drawable/sun" />
 
                 <TextView
+                    android:id="@+id/tvSunSet"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:gravity="center"
@@ -303,7 +307,6 @@
                     android:textColor="@color/black" />
 
                 <TextView
-                    android:id="@+id/tvSunSet"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:gravity="center"
@@ -329,6 +332,7 @@
                     app:srcCompat="@drawable/sunn" />
 
                 <TextView
+                    android:id="@+id/tvSunRise"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:gravity="center"
@@ -336,7 +340,6 @@
                     android:textColor="@color/black" />
 
                 <TextView
-                    android:id="@+id/tvSunRise"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:gravity="center"
